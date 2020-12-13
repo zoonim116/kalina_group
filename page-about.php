@@ -6,7 +6,8 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column is-3 about-img">
-				<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="About Us">
+                <?php $thumbnail_id = get_post_thumbnail_id( $post->ID ); ?>
+				<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php echo get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); ?>">
 			</div>
 			<div class="column is-9 about-description">
 				<h1 class="page-title"><?php the_title(); ?></h1>
