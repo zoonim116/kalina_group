@@ -17,6 +17,7 @@
 			</div>
 			<div class="column is-4 is-offset-1 services-form">
 				<p>Leave your contact details and we will send you additional information on the topic you</p>
+                <?php echo do_shortcode('[contact-form-7 id="61" title="Services form"]'); ?>
 			</div>
 		</div>
 	</div>

@@ -7256,6 +7256,9 @@ p {
     padding-left: 2.8vw; }
   .about-us .about-content p {
     margin-bottom: 10px; }
+  .about-us .column:first-child img {
+    height: 100%;
+    object-fit: cover; }
 
 .about-list {
   padding: 4.1vw 0; }
@@ -7282,6 +7285,64 @@ p {
 
 .services-form {
   align-self: center; }
+  .services-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .services-form form p {
+      width: 49%; }
+
+.wpcf7-form-control {
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  box-shadow: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 14px; }
+
+.wpcf7-submit {
+  width: 100%;
+  background: #090a0c;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .wpcf7-submit:hover {
+    background: #C84343; }
+
+.wpcf7-select {
+  background: white;
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+.wpcf7-not-valid-tip {
+  color: #C84343;
+  font-size: 12px; }
+
+.wpcf7-textarea {
+  height: 189px; }
+
+.your-subject {
+  display: block;
+  position: relative; }
+  .your-subject:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #090a0c;
+    position: absolute;
+    right: 10px;
+    top: 19px; }
+
+.contact-page-form {
+  padding-top: 40px; }
+  .contact-page-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .contact-page-form form .contact-item {
+      width: 49%; }
 
 .page-padding {
   padding: 2.7vw 0 7.4vw; }
@@ -7289,6 +7350,9 @@ p {
     margin-bottom: 1.6vw; }
   .page-padding p {
     line-height: 1.4; }
+  .page-padding .column:first-child img {
+    height: 100%;
+    object-fit: cover; }
 
 .services .services-description ul {
   padding-top: 14px; }
@@ -7298,11 +7362,10 @@ p {
     margin-bottom: 13px;
     display: inline-block; }
 
-.contact p {
-  margin-bottom: 0px; }
-
 .contact .contact-list {
   padding-top: 14px; }
+  .contact .contact-list p {
+    margin-bottom: 0px; }
   .contact .contact-list .contact-item {
     margin-bottom: calc(10px + 1.6vw); }
   .contact .contact-list svg {
@@ -7320,7 +7383,9 @@ p {
     margin-left: auto; }
   .services-content, .contact-content {
     padding-left: 2.5vw;
-    padding-top: 0px; } }
+    padding-top: 0px; }
+  .contact-page-form {
+    max-width: 85%; } }
 
 @media screen and (max-width: 768px) {
   .header {
@@ -7347,4 +7412,24 @@ p {
     padding-bottom: 50px; }
   .page-padding {
     padding-top: 50px;
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+  .services-form form p {
+    width: 100%;
+    margin-bottom: 15px; }
+  .contact-page-form form p {
+    margin-bottom: 15px; }
+  .contact-page-form form .contact-item {
+    width: 100%; }
+  .home .navbar-menu {
+    background: #090a0c; }
+  .navbar-end {
+    text-align: center;
+    border-bottom: 2px solid;
+    border-top: 2px solid; }
+  .navbar-menu {
+    box-shadow: none;
+    padding: 10px 0; }
+  body .navbar-item:hover:before, body .navbar-item.active:before {
+    bottom: 4px; }
+  .services-form form {
+    padding-top: 30px; } }

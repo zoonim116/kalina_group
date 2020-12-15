@@ -143,6 +143,14 @@ p {
   .about-content p {
     margin-bottom: 10px;
   }
+  .column {
+    &:first-child {
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 .about-list {
   padding: 4.1vw 0;
@@ -176,6 +184,70 @@ p {
 }
 .services-form {
   align-self: center;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p {
+      width: 49%;
+    }
+  }
+}
+.wpcf7-form-control {
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  box-shadow: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-size: 14px;
+}
+.wpcf7-submit {
+  width: 100%;
+  background: $dark-blue;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background: $red;
+  }
+}
+.wpcf7-select {
+  background: white;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.wpcf7-not-valid-tip {
+  color: $red;
+  font-size: 12px;
+}
+.wpcf7-textarea {
+  height: 189px;
+}
+.your-subject {
+  display: block;
+  position: relative;
+  &:before {
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid $dark-blue;
+    position: absolute;
+    right: 10px;
+    top: 19px;
+  }
+}
+.contact-page-form {
+    padding-top: 40px;
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .contact-item {
+        width: 49%;
+      }
+    }
 }
 .page-padding {
   padding: 2.7vw 0 7.4vw;
@@ -184,6 +256,14 @@ p {
   }
   p {
     line-height: 1.4;
+  }
+  .column {
+    &:first-child {
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
 .services {
@@ -201,10 +281,11 @@ p {
   }
 }
 .contact {
-  p {
-    margin-bottom: 0px;
-  }
+
   .contact-list {
+    p {
+      margin-bottom: 0px;
+    }
     padding-top: 14px;
     .contact-item {
       margin-bottom: calc(10px + 1.6vw);
@@ -231,6 +312,9 @@ p {
   .services-content, .contact-content {
     padding-left: 2.5vw;
     padding-top: 0px;
+  }
+  .contact-page-form {
+    max-width: 85%;
   }
 }
 
@@ -278,5 +362,51 @@ p {
   .page-padding {
     padding-top: $padding-m;
     padding-bottom: $padding-m;
+  }
+  .services-form {
+    form {
+      p {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .contact-page-form {
+    form {
+      p {
+        margin-bottom: 15px;
+      }
+      .contact-item {
+        width: 100%;
+      }
+    }
+  }
+  .home {
+    .navbar-menu {
+      background: $dark-blue;
+    }
+  }
+  .navbar-end {
+    text-align: center;
+    border-bottom: 2px solid;
+    border-top: 2px solid;
+  }
+  .navbar-menu {
+    box-shadow: none;
+    padding: 10px 0;
+  }
+  body {
+    .navbar-item {
+      &:hover, &.active {
+        &:before {
+          bottom: 4px;
+        }
+      }
+    }
+  }
+  .services-form {
+    form {
+      padding-top: 30px;
+    }
   }
 }
